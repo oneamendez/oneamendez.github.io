@@ -28,10 +28,22 @@ internet like any computer when it has a connection.
 
 ## Is it emulation?
 
-The iPhone and the VM are both arm64, so crate doesn't emulate another kind of
-processor. Its engine copies most of the guest's instructions as they are, and
-rewrites only what touches the machine. iOS gives apps no hypervisor, so this is
-how a VM runs on an iPhone. See [Engine and speed](/crate/engine/).
+Partly. iOS gives apps no hypervisor, the hardware support VM apps on a Mac use, so
+crate's engine runs the guest through a translator instead:
+
+- **Ordinary instructions run as they are.** The VM and the iPhone are both
+  arm64, so arithmetic, logic and the like are copied into the translated code
+  unchanged and run on the iPhone's CPU at full speed. crate doesn't emulate a
+  different kind of processor, as running x86 software on an iPhone would need.
+- **What touches the machine is emulated.** Memory accesses, branches, system
+  registers and exceptions are rewritten: the engine does in software what the
+  guest's memory management and privileged CPU state would do in hardware.
+- **The devices are emulated**, as in any VM: the interrupt controller, serial
+  port and clock, and the virtio disk, network, GPU, keyboard and tablet.
+
+That emulated part is where the time goes: in the engine's benchmark on a Mac,
+crate takes about 2.7 times as long as the same guest on Apple's hypervisor, and
+QEMU's translator about 14 times. See [Engine and speed](/crate/engine/).
 
 ## Which devices does it run on?
 

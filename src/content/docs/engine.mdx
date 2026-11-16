@@ -8,7 +8,8 @@ import { LinkCard } from '@astrojs/starlight/components';
 Every VM runs on the [crate engine](https://github.com/oneamendez/crate), so the
 engine's speed is the whole app's speed. It's written from scratch in Rust: an
 arm64-to-arm64 translator that copies most guest instructions into host code as
-they are and rewrites only what touches the machine. It runs inside the app, on
+they are and rewrites only what touches the machine: memory accesses, branches,
+system registers and exceptions, which it emulates. It runs inside the app, on
 the memory JIT lets crate claim.
 
 Around it, the VM gets a virtio GPU whose frames go straight to the app, touch
