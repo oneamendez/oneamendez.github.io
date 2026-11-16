@@ -70,7 +70,12 @@ export default defineConfig({
 					items: [
 						{ label: 'Engine and speed', slug: 'engine' },
 						{ label: 'Roadmap', slug: 'roadmap' },
-						{ label: 'Releases', slug: 'releases' },
+						// GitHub's own page, always current: nothing to update here per release.
+						{
+							label: 'Releases ↗',
+							link: 'https://github.com/oneamendez/crate-ios/releases',
+							attrs: { target: '_blank', rel: 'noopener' },
+						},
 					],
 				},
 			],
