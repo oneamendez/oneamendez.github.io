@@ -3,13 +3,13 @@ title: Roadmap
 description: Where crate is going next, from speed and stability to graphics and devices.
 ---
 
-import { Aside, LinkCard } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
 
 crate already runs Ubuntu, Debian and Arch Linux ARM with GPU-accelerated
 desktops, drives an external monitor with the iPhone as its trackpad, and turns
 on JIT by itself. Here's what comes next, roughly in order. Every VM runs on the
 [crate engine](https://github.com/oneamendez/crate), so most of this is engine
-work, and that's where help counts most.
+work.
 
 ## 1. Speed, measured properly
 
@@ -72,12 +72,5 @@ files reaching iOS.
 
 Omarchy back in the catalog once its bugs are fixed, custom Linux images of your
 own, then other operating systems.
-
-<Aside type="tip" title="Want to help?">
-	Contributions to the engine go to
-	[its repository](https://github.com/oneamendez/crate), and to the app to
-	[crate-ios](https://github.com/oneamendez/crate-ios). Bug reports with
-	[logs](/crate/guides/logs/) help too.
-</Aside>
 
 <LinkCard title="Releases" href="/crate/releases/" description="What's shipped so far, release by release." />
