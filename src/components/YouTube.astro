@@ -30,9 +30,11 @@ const posterUrl = poster ? (await getImage({ src: poster, width: 1280, format: '
 		</figure>
 	) : (
 		<figure class="shot">
-			<div class="todo todo-empty" role="img" aria-label={`Placeholder: ${title}`}>
-				<strong>YouTube video to make: {title}</strong>
-				<span>{todo}</span>
+			<div class="todo todo-empty video" role="img" aria-label={`Placeholder: ${title}`}>
+				{posterUrl && <img src={posterUrl} alt="" loading="lazy" />}
+				<div class="todo-tag">
+					<b>YouTube video to make: {title}</b> · {todo}
+				</div>
 			</div>
 		</figure>
 	)
