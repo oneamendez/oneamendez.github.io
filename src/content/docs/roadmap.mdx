@@ -1,0 +1,83 @@
+---
+title: Roadmap
+description: Where crate is going next, from speed and stability to graphics and devices.
+---
+
+import { Aside, LinkCard } from '@astrojs/starlight/components';
+
+crate already runs Ubuntu, Debian and Arch Linux ARM with GPU-accelerated
+desktops, drives an external monitor with the iPhone as its trackpad, and turns
+on JIT by itself. Here's what comes next, roughly in order. Every VM runs on the
+[crate engine](https://github.com/oneamendez/crate), so most of this is engine
+work, and that's where help counts most.
+
+## 1. Speed, measured properly
+
+**Today:** a fixed set of workloads in a Debian guest, run on crate, on QEMU's
+translator and on Apple's hypervisor, where every engine must print the same
+output. On a Mac crate takes about 2.7 times as long as the hypervisor, and
+QEMU's translator about 14 times. [The numbers →](/crate/engine/)
+
+**Next: a benchmark framework.** One harness that runs the same guest and the
+same workloads on any engine, so the comparisons are fair and anyone can repeat
+them:
+
+- **crate against other engines.** crate's translator, Apple's hypervisor, QEMU's
+  translator and other emulators and VM engines that run arm64 Linux, side by
+  side, on a Mac and on iPhones and iPads.
+- **Workloads people actually run.** Booting to a desktop, opening apps, loading
+  web pages, building code, and graphics frame rates, not only small loops.
+- **Correct as well as fast.** Every run checks the guest's output against
+  native, so a speed-up that breaks something is caught.
+- **Run on every change to the engine.** Each change is measured before it ships,
+  so one that makes crate slower or breaks a workload is caught as a regression
+  instead of found later.
+- **Published.** The results, and their history, on
+  [Engine and speed](/crate/engine/).
+
+Then, with the numbers to guide it: faster translation, faster startup and faster
+graphics.
+
+## 2. A more stable app
+
+- **Fewer crashes,** and a clear report when one happens. Logs already survive a
+  crash; the aim is that there's less to report.
+- **iOS closing crate less often.** Memory the guest touches stays counted
+  against crate today, even after the guest frees it. Giving freed memory back to
+  iOS, and keeping a VM within what iOS allows, means fewer VMs closed for using
+  too much.
+- **JIT that turns on every time,** without retries.
+- **Long sessions that stay smooth,** tested on real iPhones and iPads.
+
+## 3. Better graphics
+
+**Today:** the guest's OpenGL runs on the iPhone's GPU through virglrenderer,
+ANGLE and MoltenVK. Guests get OpenGL ES 3.1, desktops composite in hardware,
+and Chrome accelerates canvas, WebGL and WebGPU.
+
+- **Geometry shaders.** Apple's Metal has none, and that's what holds guests at
+  OpenGL ES 3.1 and below desktop OpenGL 3.2. We'll try to provide them anyway, which
+  would open up OpenGL 3.2 and later, and the 3D apps and games that need them.
+- **Newer OpenGL and Vulkan,** so more of what runs on a Linux PC runs in the VM.
+- **Faster frames,** with the benchmark framework measuring frame rates.
+
+## 4. Monitors and devices
+
+An external monitor already works as the VM's screen. Next, the keyboards, mice,
+game controllers, cameras, microphones, USB storage and other devices iOS lets an
+app reach, passed through to the VM; the other way, the VM's sound, clipboard and
+files reaching iOS.
+
+## 5. More systems
+
+Omarchy back in the catalog once its bugs are fixed, custom Linux images of your
+own, then other operating systems.
+
+<Aside type="tip" title="Want to help?">
+	Contributions to the engine go to
+	[its repository](https://github.com/oneamendez/crate), and to the app to
+	[crate-ios](https://github.com/oneamendez/crate-ios). Bug reports with
+	[logs](/crate/guides/logs/) help too.
+</Aside>
+
+<LinkCard title="Releases" href="/crate/releases/" description="What's shipped so far, release by release." />
