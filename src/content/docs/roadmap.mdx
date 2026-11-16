@@ -55,10 +55,13 @@ graphics.
 ANGLE and MoltenVK. Guests get OpenGL ES 3.1, desktops composite in hardware,
 and Chrome accelerates canvas, WebGL and WebGPU.
 
+- **Venus.** Mesa's Venus driver passes the guest's Vulkan calls through
+  virtio-gpu and virglrenderer to MoltenVK on the iPhone's GPU, so Vulkan apps
+  and games run in the VM, beside today's OpenGL.
 - **Geometry shaders.** Apple's Metal has none, and that's what holds guests at
-  OpenGL ES 3.1 and below desktop OpenGL 3.2. We'll try to provide them anyway, which
-  would open up OpenGL 3.2 and later, and the 3D apps and games that need them.
-- **Newer OpenGL and Vulkan,** so more of what runs on a Linux PC runs in the VM.
+  OpenGL ES 3.1 and below desktop OpenGL 3.2. We'll try to provide them anyway,
+  which would open up OpenGL 3.2 and later, and the 3D apps and games that need
+  them.
 - **Faster frames,** with the benchmark framework measuring frame rates.
 
 ## 4. Monitors and devices
