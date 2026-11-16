@@ -1,0 +1,161 @@
+---
+title: crate
+description: Full Linux distributions, desktop and all, running in virtual machines on your iPhone and iPad, entirely on the device.
+template: splash
+hero:
+  title: Linux desktops on your iPhone and iPad
+  tagline: Ubuntu, Debian and Arch Linux ARM, desktop and all, in virtual machines that run entirely on the device. Offline, GPU-accelerated, and free.
+  image:
+    html: |
+      <figure class="hero-clip todo">
+        <img src="/media/hero-poster.jpg" width="1400" height="985" alt="Ubuntu's GNOME desktop with a terminal open, landscape on an iPhone Duo">
+        <figcaption class="todo-tag"><b>Clip A to record</b> · 10–15 s, muted, real time: tap Start on the Duo, the GNOME desktop comes up, a terminal opens.</figcaption>
+      </figure>
+  actions:
+    - text: Download
+      link: https://github.com/oneamendez/crate-ios/releases/latest
+      icon: download
+    - text: Install guide
+      link: /install/
+      icon: right-arrow
+      variant: secondary
+    - text: GitHub
+      link: https://github.com/oneamendez/crate-ios
+      icon: github
+      variant: minimal
+---
+
+import { Card, CardGrid, LinkButton } from '@astrojs/starlight/components';
+import Clip from '../../components/Clip.astro';
+import Shot from '../../components/Shot.astro';
+import YouTube from '../../components/YouTube.astro';
+import monitor from '../../assets/media/monitor.png';
+import chromeGpu from '../../assets/media/chrome-gpu.png';
+import solidcraft from '../../assets/media/solidcraft.png';
+import kde from '../../assets/media/kde.png';
+import desktop from '../../assets/media/desktop.png';
+
+## Why crate
+
+<CardGrid>
+	<Card title="A real computer in your pocket" icon="laptop">
+		Not a remote desktop or a cloud VM: the whole operating system runs on the
+		iPhone, works offline, and your files stay on it.
+	</Card>
+	<Card title="Real distributions" icon="puzzle">
+		Stock arm64 Linux with its own package manager, so what runs on an Arm
+		laptop installs as it is: browsers, developer tools, coding agents like
+		Claude Code, CAD apps.
+	</Card>
+	<Card title="Built for speed" icon="rocket">
+		The [crate engine](/engine/) is written from scratch in Rust: an
+		arm64-to-arm64 translator that copies most guest instructions as they are
+		and rewrites only what touches the machine.
+	</Card>
+	<Card title="GPU-accelerated" icon="star">
+		The guest's OpenGL runs on the iPhone's GPU, through virglrenderer, ANGLE
+		and MoltenVK: desktops composite in hardware, and 3D apps render on it.
+	</Card>
+	<Card title="Made for the phone" icon="approve-check">
+		Touch is a tablet, a key row adds Esc, Ctrl, Super, Tab, function keys and
+		arrows, and the desktop follows the phone as it turns or folds.
+	</Card>
+	<Card title="Open source" icon="open-book">
+		The app and the engine are MPL-2.0, and every library they carry is built
+		from upstream source.
+	</Card>
+</CardGrid>
+
+<div class="feature-row">
+	<Clip
+		poster={monitor}
+		alt="Ubuntu's GNOME desktop filling an external monitor, with an iPhone Duo below it showing crate's trackpad"
+		todo="Clip B · 10–15 s, camera on a tripod: the iPhone plugged into a monitor, a finger on the phone moves the pointer and opens a window."
+	/>
+	<div>
+		### An external monitor is the VM's screen
+
+		Plug in a monitor and the desktop fills it at the monitor's own
+		resolution, while the iPhone or iPad becomes its trackpad.
+		[More on monitors →](/guides/external-monitor/)
+	</div>
+</div>
+
+<div class="feature-row flip">
+	<Clip
+		alt="An iPhone Duo folding and unfolding while the Linux desktop reflows to fit"
+		todo="Clip C · 10 s, camera: unfold the Duo, then fold it, and the desktop follows each time."
+	/>
+	<div>
+		### The desktop follows the fold
+
+		Turn the phone and the desktop turns with it. On iPhone Duo, crate has
+		layouts of its own for the open and folded screens.
+		[See every feature →](/features/)
+	</div>
+</div>
+
+<div class="feature-row">
+	<Clip
+		poster={chromeGpu}
+		alt="Chrome's chrome://gpu page listing canvas, compositing, WebGL and WebGPU as hardware accelerated"
+		todo="Clip D · 10–15 s, screen recording: Chrome in the VM running a WebGL demo smoothly."
+	/>
+	<div>
+		### GPU-accelerated desktops
+
+		The guest's OpenGL runs on the iPhone's GPU. Chrome's own GPU page shows
+		canvas, compositing, WebGL and WebGPU in hardware.
+	</div>
+</div>
+
+## What it runs
+
+From the Install tab, each with an account of your own:
+
+<CardGrid>
+	<Card title="Ubuntu 26.04 LTS">GNOME, the heaviest desktop of them, and it runs.</Card>
+	<Card title="Debian 13">KDE Plasma or Xfce.</Card>
+	<Card title="Arch Linux ARM">KDE Plasma or Xfce.</Card>
+</CardGrid>
+
+Coming soon: Omarchy with Hyprland, custom Linux images of your own, and other
+operating systems.
+
+## Fast, from the engine up
+
+A fixed set of workloads in a Debian guest, on an M3 MacBook Air. The whole pass,
+in seconds; shorter is faster:
+
+<div class="speed">
+	<div class="speed-row"><span>crate</span><div class="speed-bar crate" style="width: 18.8%"></div><span>24.5 s</span></div>
+	<div class="speed-row"><span>QEMU's TCG</span><div class="speed-bar" style="width: 100%"></div><span>130.5 s</span></div>
+	<div class="speed-row"><span>Native (hvf)</span><div class="speed-bar" style="width: 7%"></div><span>9.1 s</span></div>
+</div>
+
+On an iPhone Duo, the desktop is drawn 6.3 s after the app opens.
+[The numbers →](/engine/)
+
+## Gallery
+
+<div class="shots">
+	<Shot src={solidcraft} alt="SolidCraft, a 3D CAD app, with a chair model beside a terminal running Claude Code, in GNOME on an iPhone Duo" caption="Claude Code builds a chair in SolidCraft, a 3D CAD app." />
+	<Shot src={kde} alt="KDE Plasma's desktop with its application menu open, on an iPhone Duo" caption="Arch Linux ARM with KDE Plasma." />
+	<Shot alt="Debian with Xfce on an iPad, with the trackpad pointer visible" todo="iPad in landscape: Debian Xfce with a few windows open and the pointer visible." caption="Debian with Xfce on an iPad." />
+</div>
+
+<YouTube
+	title="crate in 2 minutes"
+	poster={desktop}
+	todo="See LAUNCH.md, video 1: install a VM, boot it, a browser, Claude Code, a monitor, the Duo's fold. Captions, no voice needed."
+/>
+
+<LinkButton href="/gallery/" variant="secondary" icon="right-arrow">More in the gallery</LinkButton>
+
+## Try it
+
+crate needs JIT, which iOS gives only to an app a debugger has attached to, so
+it can't come from the App Store. Each release has an IPA you sign with your own
+Apple account on a Mac.
+
+<LinkButton href="/install/" icon="right-arrow">Install crate</LinkButton>

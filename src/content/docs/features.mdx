@@ -1,0 +1,102 @@
+---
+title: Features
+description: Everything crate does, from installing a distribution to driving an external monitor.
+---
+
+import Clip from '../../components/Clip.astro';
+import Shot from '../../components/Shot.astro';
+import monitor from '../../assets/media/monitor.png';
+import chromeGpu from '../../assets/media/chrome-gpu.png';
+import solidcraft from '../../assets/media/solidcraft.png';
+import displaySettings from '../../assets/media/display-settings.png';
+
+## Real distributions, from a catalog
+
+The Install tab lists Ubuntu 26.04 LTS with GNOME, Debian 13 and Arch Linux ARM
+with KDE Plasma or Xfce. Pick one, a memory size and a disk size, and crate
+downloads it, checks every file, and asks for the account to create in it. The
+images are each distribution's own, built and attested by a public GitHub
+workflow.
+
+<div class="shots">
+	<Shot alt="crate's Install tab listing Ubuntu, Debian and Arch Linux ARM with their desktops and sizes" todo="iPhone, portrait: the Install tab with the list of images, the memory picker and the disk slider." caption="The Install tab." />
+	<Shot alt="The account sheet asking for a user name, password and computer name" todo="iPhone, portrait: the account sheet, with a made-up user name filled in." caption="Each VM gets an account of your own." />
+</div>
+
+## Memory and disk of your choice
+
+A memory limit from 2 to 12 GB, which you can change later in the VM's
+settings, and a disk from 16 GB up, set at install. The disk is sparse: it takes
+space on the iPhone only as the VM writes.
+[Memory and disk →](/guides/memory-and-disk/)
+
+## GPU-accelerated
+
+The guest's OpenGL runs on the iPhone's GPU through virglrenderer, ANGLE and
+MoltenVK. Desktops composite in hardware, browsers accelerate canvas, WebGL and
+WebGPU, and 3D apps render on the GPU.
+
+<div class="shots">
+	<Shot src={chromeGpu} alt="Chrome's chrome://gpu page listing canvas, compositing, WebGL and WebGPU as hardware accelerated" caption="Chrome's GPU page in the VM." />
+	<Shot src={solidcraft} alt="SolidCraft, a 3D CAD app, with a chair model beside a terminal running Claude Code" caption="SolidCraft, a 3D CAD app, driven by Claude Code." />
+</div>
+
+## Touch, keyboard and the key row
+
+Touch works as a tablet: tap to click, and drag to move windows. A hardware
+keyboard works as it is. The on-screen keyboard gets a key row above it with
+Esc, Ctrl, Super, Tab, function keys and arrows, the keys a terminal needs.
+
+<div class="shots">
+	<Clip alt="Typing in vim on the on-screen keyboard, using the key row's Esc, Ctrl and arrow keys" todo="Clip F · 10–15 s, screen recording: vim in a terminal, using Esc, Ctrl and the arrows from the key row." />
+</div>
+
+## A mouse or trackpad on iPad
+
+A mouse or trackpad drives the desktop's pointer, with wheel scrolling and right
+and middle click.
+
+<div class="shots">
+	<Clip alt="An iPad trackpad right-clicking, scrolling and dragging windows on a Linux desktop" todo="Clip G · 10–15 s: on the iPad, right-click a file, scroll a page, drag a window." />
+</div>
+
+## An external monitor
+
+The VM's screen moves to the monitor at the monitor's resolution, and the iPhone
+or iPad becomes its trackpad.
+[External monitor →](/guides/external-monitor/)
+
+<div class="shots">
+	<Shot src={monitor} alt="Ubuntu's GNOME desktop filling an external monitor, with an iPhone Duo below it showing crate's trackpad" caption="Ubuntu on a monitor, the iPhone Duo as its trackpad." />
+</div>
+
+## The desktop follows the phone
+
+Turn the phone and the desktop turns with it; the VM sets its own resolution, so
+it can fit more on screen. On iPhone Duo, crate has layouts for the open and
+folded screens, and the desktop follows the fold.
+
+<div class="shots">
+	<Shot src={displaySettings} alt="GNOME's Displays settings with the resolution set to 1280 by 800" caption="The VM sets its own resolution." />
+	<Clip alt="Rotating an iPhone from portrait to landscape while the desktop follows" todo="Clip E · 8–10 s, screen recording: rotate the phone, and the desktop resizes to fit." />
+</div>
+
+## The serial console
+
+Each VM's serial console is a tab away from its desktop, for when you want a
+plain terminal, or to watch it boot.
+
+<div class="shots">
+	<Shot alt="The VM's serial console showing the end of the boot and a login prompt" todo="iPhone: the console tab, with the last boot messages and a prompt." caption="The serial console." />
+</div>
+
+## JIT, built in
+
+crate turns on JIT itself with its built-in StikJIT, or with StikDebug if you
+already use it. [Turning on JIT →](/guides/jit/)
+
+## Logs for bug reports
+
+crate can log what it and the engine do, this launch and the last, kept across a
+crash, with its memory use if you want. Export Logs shares them.
+[Logs and bug reports →](/guides/logs/)

@@ -1,0 +1,33 @@
+# build output
+dist/
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# Original photos and videos, before npm run media cleans them. Never commit
+# these: they carry location, device and date metadata.
+incoming/
+*.mov
+*.MOV
+*.heic
+*.HEIC
+*.heif
+*.dng
+*.raw
+youtube/

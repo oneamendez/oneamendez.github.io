@@ -1,0 +1,59 @@
+---
+title: Gallery
+description: Screenshots, photos and videos of crate running Linux on iPhone and iPad.
+---
+
+import Clip from '../../components/Clip.astro';
+import Shot from '../../components/Shot.astro';
+import YouTube from '../../components/YouTube.astro';
+import desktop from '../../assets/media/desktop.png';
+import kde from '../../assets/media/kde.png';
+import solidcraft from '../../assets/media/solidcraft.png';
+import chromeGpu from '../../assets/media/chrome-gpu.png';
+import displaySettings from '../../assets/media/display-settings.png';
+import monitor from '../../assets/media/monitor.png';
+
+## Videos
+
+<div class="shots">
+	<YouTube title="crate in 2 minutes" poster={desktop} todo="Video 1 in LAUNCH.md." />
+	<YouTube title="Installing crate, start to finish" todo="Video 2 in LAUNCH.md." />
+	<YouTube title="Boot to desktop, in real time" todo="Video 3 in LAUNCH.md." />
+</div>
+
+## Desktops
+
+<div class="shots">
+	<Shot src={desktop} alt="Ubuntu's GNOME desktop with a terminal open, landscape on an iPhone Duo" caption="Ubuntu 26.04 LTS with GNOME." />
+	<Shot src={kde} alt="KDE Plasma's desktop with its application menu open, on an iPhone Duo" caption="Arch Linux ARM with KDE Plasma." />
+	<Shot alt="Debian with KDE Plasma" todo="Debian 13 with KDE Plasma, same device and orientation as the others." caption="Debian 13 with KDE Plasma." />
+	<Shot alt="Debian with Xfce" todo="Debian 13 with Xfce, same device and orientation." caption="Debian 13 with Xfce." />
+	<Shot alt="Arch Linux ARM with Xfce" todo="Arch Linux ARM with Xfce, same device and orientation." caption="Arch Linux ARM with Xfce." />
+</div>
+
+## Apps
+
+<div class="shots">
+	<Shot src={solidcraft} alt="SolidCraft, a 3D CAD app, with a chair model beside a terminal running Claude Code, in GNOME on an iPhone Duo" caption="Claude Code builds a chair in SolidCraft, a 3D CAD app." />
+	<Shot src={chromeGpu} alt="Chrome's chrome://gpu page listing canvas, compositing, WebGL and WebGPU as hardware accelerated" caption="Chrome with GPU acceleration." />
+	<Shot src={displaySettings} alt="GNOME's Displays settings with the resolution set to 1280 by 800" caption="The VM sets its own resolution." />
+	<Shot alt="A web browser in the VM showing a real website" todo="Firefox or Chrome on a real site (yours or a project page, nothing personal)." caption="A full desktop browser." />
+	<Shot alt="An office suite or image editor in the VM" todo="LibreOffice or GIMP with a document open." caption="Office and creative apps." />
+</div>
+
+## Devices
+
+<div class="shots">
+	<Shot src={monitor} alt="Ubuntu's GNOME desktop filling an external monitor, with an iPhone Duo below it showing crate's trackpad" caption="An external monitor, the iPhone Duo as its trackpad." />
+	<Shot alt="An iPad in landscape with a keyboard, running a Linux desktop" todo="Photo: the iPad with a keyboard on a desk, a desktop on screen." caption="iPad with a keyboard." />
+	<Shot alt="An iPhone Duo folded, then open, running the same desktop" todo="Photo pair or side-by-side: the Duo folded and open with the same VM." caption="iPhone Duo, folded and open." />
+	<Clip alt="Ubuntu on a monitor driven from the iPhone" poster={monitor} todo="Clip B: the monitor and trackpad in use." />
+</div>
+
+## The app
+
+<div class="shots">
+	<Shot alt="crate's Home tab with VM cards" todo="iPhone, portrait: Home with two or three VM cards." caption="Home: one card per VM." />
+	<Shot alt="crate's Settings tab with JIT, memory and logs" todo="iPhone, portrait: Settings with JIT on." caption="Settings." />
+	<Shot alt="A VM's settings with the memory picker" todo="iPhone, portrait: a VM's settings sheet with the 2–12 GB picker." caption="A VM's settings." />
+</div>

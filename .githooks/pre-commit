@@ -1,0 +1,5 @@
+#!/bin/sh
+# Refuses a commit that would add an image or video carrying metadata
+# (location, device, dates, software). npm install turns this hook on
+# (package.json's prepare script sets core.hooksPath).
+exec node scripts/check-media.mjs
