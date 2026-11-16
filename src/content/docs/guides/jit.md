@@ -37,4 +37,4 @@ largest, 1024 MB: more room for translated code means less translating again.
   to attach. `sign-ipa.sh` warns when it isn't.
 - For the built-in StikJIT, check that LocalDevVPN is connected, and run Set Up
   JIT again.
-- [Export the logs](/guides/logs/): each launch logs its JIT steps.
+- [Export the logs](/crate/guides/logs/): each launch logs its JIT steps.

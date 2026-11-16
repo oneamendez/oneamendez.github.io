@@ -21,8 +21,8 @@ owner's go-ahead.
 1. Make this repository public (free), or keep it private on GitHub Pro.
 2. Settings › Pages › Build and deployment › Source: **GitHub Actions**.
 3. Actions › Deploy › Run workflow. The site appears at
-   https://oneamendez.github.io a minute later.
-4. Set https://oneamendez.github.io as crate-ios's website (repo › About ›
+   https://oneamendez.github.io/crate/ a minute later.
+4. Set https://oneamendez.github.io/crate/ as crate-ios's website (repo › About ›
    Website), and switch the YouTube videos to public.
 
 ## Adding pictures and videos
@@ -52,7 +52,6 @@ microphone off.
 |---|---|---|
 | A | Home, hero | Tap Start on the Duo, the GNOME desktop comes up, a terminal opens. Real time. |
 | B | Home, Features, Gallery | Camera on a tripod: the iPhone plugged into a monitor, a finger on the phone moves the pointer and opens a window. |
-| C | Home | Camera: unfold the Duo, then fold it; the desktop follows each time. |
 | D | Home | Chrome in the VM running a WebGL demo. |
 | E | Features | Rotate the phone; the desktop resizes to fit. |
 | F | Features | vim in a terminal, using Esc, Ctrl and the arrows from the key row. |
@@ -72,7 +71,7 @@ names out of frame.
   KDE, Debian Xfce, Arch KDE (have), Arch Xfce.
 - Apps: a browser on a real site, LibreOffice or GIMP.
 - iPad in landscape with Debian Xfce and the pointer visible.
-- Photos: the iPad with a keyboard on a desk; the Duo folded and open.
+- Photo: the iPad with a keyboard on a desk.
 - Mac: Xcode's Signing & Capabilities with the two memory capabilities, the
   team name and email cropped out.
 
@@ -90,9 +89,8 @@ location or device either.
    - The desktop: a terminal, `apt install` of something, a browser on a site.
    - Claude Code building something in SolidCraft (time-lapse, labelled).
    - The external monitor with the iPhone as its trackpad.
-   - Folding the Duo and rotating the phone.
    - The iPad with a trackpad and keyboard.
-   - End card: oneamendez.github.io and the GitHub link.
+   - End card: oneamendez.github.io/crate and the GitHub link.
 2. **Installing crate, start to finish** (4–6 min), with YouTube chapters.
    - Download and verify the IPA; make the profiles in Xcode, with the two
      capabilities; `sign-ipa.sh --install`; Developer Mode.

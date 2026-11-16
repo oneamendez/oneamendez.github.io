@@ -12,6 +12,17 @@
 	--sl-color-accent-high: #12305f;
 }
 
+/* The sidebar, hidden by the header's button (SidebarToggle.astro). Only on
+   wide screens; narrow ones use the menu button as before. */
+@media (min-width: 50em) {
+	:root[data-has-sidebar][data-sidebar-hidden] {
+		--sl-content-inline-start: 0rem;
+	}
+	:root[data-sidebar-hidden] .sidebar-pane {
+		display: none !important;
+	}
+}
+
 /* The hero's picture or clip, rounded like a screen. */
 .hero-clip {
 	position: relative;

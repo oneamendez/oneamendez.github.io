@@ -15,4 +15,4 @@ becomes the desktop's trackpad.
 - **Xfce**: the panel, icons and windows follow the new size, but the wallpaper
   keeps its old one for now.
 
-See [Known issues](/guides/known-issues/) for both.
+See [Known issues](/crate/guides/known-issues/) for both.

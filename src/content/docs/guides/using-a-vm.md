@@ -22,9 +22,9 @@ ends it at once, as pulling the plug on a computer would.
 
 ## Screen size
 
-The desktop follows the iPhone as it turns, and on iPhone Duo as it folds. The VM
+The desktop follows the iPhone as it turns. The VM
 sets its own resolution in its display settings: 1280 × 800 fits more on screen
-than the default. On a monitor, see [External monitor](/guides/external-monitor/).
+than the default. On a monitor, see [External monitor](/crate/guides/external-monitor/).
 
 ## The serial console
 
@@ -34,4 +34,4 @@ the place to watch the VM boot.
 ## Updating the VM
 
 Update the VM's packages as you would on any computer. One exception: the VM
-can't update its own kernel yet. See [Known issues](/guides/known-issues/).
+can't update its own kernel yet. See [Known issues](/crate/guides/known-issues/).

@@ -7,7 +7,7 @@ description: Common questions about crate.
 
 crate needs JIT, which iOS gives only to an app a debugger has attached to, and
 only apps signed for development can be attached to. The App Store doesn't allow
-that, so you sign crate yourself. See [Install](/install/).
+that, so you sign crate yourself. See [Install](/crate/install/).
 
 ## Do I need a Mac?
 
@@ -31,20 +31,20 @@ internet like any computer when it has a connection.
 The iPhone and the VM are both arm64, so crate doesn't emulate another kind of
 processor. Its engine copies most of the guest's instructions as they are, and
 rewrites only what touches the machine. iOS gives apps no hypervisor, so this is
-how a VM runs on an iPhone. See [Engine and speed](/engine/).
+how a VM runs on an iPhone. See [Engine and speed](/crate/engine/).
 
 ## Which devices does it run on?
 
 crate is developed on an iPhone Duo with iOS 27.1, and runs on other recent
 iPhones and on iPads. The more memory iOS allows crate, the bigger the VM can be:
-see [Memory and disk](/guides/memory-and-disk/).
+see [Memory and disk](/crate/guides/memory-and-disk/).
 
 ## Can it run Windows or macOS?
 
 Not now. Linux comes first; custom Linux images and other operating systems are
-on the [roadmap](/roadmap/).
+on the [roadmap](/crate/roadmap/).
 
 ## How do I report a bug?
 
 [Open an issue](https://github.com/oneamendez/crate-ios/issues) with your
-[logs](/guides/logs/).
+[logs](/crate/guides/logs/).

@@ -24,4 +24,4 @@ inside the VM and pick a resolution with the monitor's aspect ratio, such as
 ---
 
 Something else? [Open an issue](https://github.com/oneamendez/crate-ios/issues)
-with your [logs](/guides/logs/).
+with your [logs](/crate/guides/logs/).

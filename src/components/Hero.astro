@@ -1,0 +1,74 @@
+---
+// The home page's hero: crate's icon and name, then Starlight's own hero
+// (title, tagline, buttons and the clip).
+import { Image } from 'astro:assets';
+import Default from '@astrojs/starlight/components/Hero.astro';
+import icon from '../assets/media/icon.png';
+---
+
+<div class="hero-brand">
+	<Image
+		src={icon}
+		alt="crate's icon: an open wooden crate holding three app windows"
+		width={104}
+		height={104}
+		densities={[1, 2]}
+		loading="eager"
+	/>
+	<div>
+		<p class="hero-brand-name">crate</p>
+		<p class="hero-brand-acronym">
+			<b>C</b>ompact <b>R</b>untime for <b>A</b>rm64 <b>T</b>ranslation and <b>E</b>mulation
+		</p>
+	</div>
+</div>
+<Default />
+
+<style>
+	.hero-brand {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding-top: 1.5rem;
+	}
+	.hero-brand img {
+		width: 6.5rem;
+		height: 6.5rem;
+		border-radius: 1.4rem;
+	}
+	.hero-brand p {
+		margin: 0;
+	}
+	.hero-brand-name {
+		font-size: var(--sl-text-4xl);
+		font-weight: 700;
+		line-height: 1;
+		color: var(--sl-color-white);
+	}
+	.hero-brand-acronym {
+		margin-top: 0.4rem !important;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+	}
+	.hero-brand-acronym b {
+		color: var(--sl-color-accent-high);
+	}
+	@media (max-width: 49.99rem) {
+		.hero-brand {
+			justify-content: center;
+			text-align: start;
+		}
+	}
+	/* Bring Starlight's hero up under the icon, and with the sidebar beside it,
+	   put the clip under the buttons at full width rather than in a narrow
+	   column beside the title. */
+	.hero-brand + :global(.hero) {
+		padding-top: 1.5rem;
+		grid-template-columns: 100%;
+	}
+	.hero-brand + :global(.hero) > :global(.hero-html) {
+		order: 2;
+		width: 100%;
+		margin-top: 1rem;
+	}
+</style>

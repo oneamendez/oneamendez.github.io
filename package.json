@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
     "start": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
-    "build": "node scripts/check-media.mjs && ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "build": "node scripts/check-media.mjs && ASTRO_TELEMETRY_DISABLED=1 astro build && node scripts/site-root.mjs",
     "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
     "media": "node scripts/strip-media.mjs",
     "check-media": "node scripts/check-media.mjs",

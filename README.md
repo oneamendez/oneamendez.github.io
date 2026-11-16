@@ -3,13 +3,17 @@
 The website for [crate](https://github.com/oneamendez/crate-ios), which runs
 Linux VMs on iPhone and iPad. Built with [Astro](https://astro.build) and
 [Starlight](https://starlight.astro.build); it will be published at
-https://oneamendez.github.io. It isn't yet: see [LAUNCH.md](LAUNCH.md).
+https://oneamendez.github.io/crate/. It isn't yet: see [LAUNCH.md](LAUNCH.md).
+
+crate's site is under `/crate/`, so the root of oneamendez.github.io stays free
+for other projects. `root/index.html` is the root's page: for now, a link on to
+crate.
 
 ## Working on it
 
     npm install
-    npm run dev        # http://localhost:4321, updates as you edit
-    npm run build      # the static site, in dist/
+    npm run dev        # http://localhost:4321/crate/, updates as you edit
+    npm run build      # the whole site, in dist/ (crate's in dist/crate/)
 
 `npm install` also turns on the pre-commit hook (`.githooks/`).
 

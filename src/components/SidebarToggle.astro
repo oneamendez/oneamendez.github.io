@@ -1,0 +1,81 @@
+---
+// A button before the site title that hides or shows the sidebar on wide
+// screens, remembered in this browser. (Narrow screens already have the menu
+// button.) Each group in the sidebar also opens and closes on its own.
+import Default from '@astrojs/starlight/components/SiteTitle.astro';
+
+const { hasSidebar } = Astro.locals.starlightRoute;
+---
+
+{
+	hasSidebar && (
+		<button
+			type="button"
+			class="sidebar-toggle"
+			aria-controls="starlight__sidebar"
+			aria-label="Hide sidebar"
+			aria-pressed="false"
+			title="Hide sidebar"
+		>
+			<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+				<rect x="3" y="4" width="18" height="16" rx="2.5" />
+				<path d="M9 4v16" />
+				<path class="sidebar-toggle-fill" d="M5.5 7.5h1.5M5.5 10.5h1.5M5.5 13.5h1.5" />
+			</svg>
+		</button>
+	)
+}
+<Default />
+
+<script>
+	const root = document.documentElement;
+	const sync = (button: HTMLButtonElement) => {
+		const hidden = root.hasAttribute('data-sidebar-hidden');
+		const label = hidden ? 'Show sidebar' : 'Hide sidebar';
+		button.setAttribute('aria-pressed', String(hidden));
+		button.setAttribute('aria-label', label);
+		button.title = label;
+	};
+	for (const button of document.querySelectorAll<HTMLButtonElement>('.sidebar-toggle')) {
+		sync(button);
+		button.addEventListener('click', () => {
+			root.toggleAttribute('data-sidebar-hidden');
+			try {
+				localStorage.setItem('crate-sidebar', root.hasAttribute('data-sidebar-hidden') ? 'hidden' : 'shown');
+			} catch {
+				// Private browsing: it just won't be remembered.
+			}
+			sync(button);
+		});
+	}
+</script>
+
+<style>
+	.sidebar-toggle {
+		display: none;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		width: 2.25rem;
+		height: 2.25rem;
+		margin-inline-end: 0.5rem;
+		border: 0;
+		border-radius: 0.5rem;
+		background: transparent;
+		color: var(--sl-color-gray-2);
+		cursor: pointer;
+	}
+	.sidebar-toggle:hover {
+		background: var(--sl-color-gray-6);
+		color: var(--sl-color-white);
+	}
+	.sidebar-toggle:focus-visible {
+		outline: 2px solid var(--sl-color-accent);
+		outline-offset: 2px;
+	}
+	@media (min-width: 50rem) {
+		.sidebar-toggle {
+			display: inline-flex;
+		}
+	}
+</style>

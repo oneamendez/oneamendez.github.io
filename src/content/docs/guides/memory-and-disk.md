@@ -14,7 +14,7 @@ right now.
 
 - **The memory entitlements raise the limit.** Sign crate with Increased Memory
   Limit and Extended Virtual Address Space if your Apple account allows it; see
-  [Install](/install/).
+  [Install](/crate/install/).
 - **Smaller can be better on an iPhone.** Memory crate uses for the VM isn't
   there for the desktop's apps. 2 to 4 GB with Xfce leaves the most room for a
   browser.

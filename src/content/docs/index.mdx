@@ -1,14 +1,14 @@
 ---
 title: Linux VMs on iPhone and iPad
 description: Full Linux distributions, desktop and all, running in virtual machines on your iPhone and iPad, entirely on the device.
-template: splash
+tableOfContents: false
 hero:
   title: Linux desktops on your iPhone and iPad
   tagline: Ubuntu, Debian and Arch Linux ARM, desktop and all, in virtual machines that run entirely on the device. Offline, GPU-accelerated, and free.
   image:
     html: |
       <figure class="hero-clip todo">
-        <img src="/media/hero-poster.jpg" width="1400" height="985" alt="Ubuntu's GNOME desktop with a terminal open, landscape on an iPhone Duo">
+        <img src="/crate/media/hero-poster.jpg" width="1400" height="985" alt="Ubuntu's GNOME desktop with a terminal open, landscape on an iPhone Duo">
         <figcaption class="todo-tag"><b>Clip A to record</b> · 10–15 s, muted, real time: tap Start on the Duo, the GNOME desktop comes up, a terminal opens.</figcaption>
       </figure>
   actions:
@@ -16,7 +16,7 @@ hero:
       link: https://github.com/oneamendez/crate-ios/releases/latest
       icon: download
     - text: Install guide
-      link: /install/
+      link: /crate/install/
       icon: right-arrow
       variant: secondary
     - text: GitHub
@@ -48,7 +48,7 @@ import desktop from '../../assets/media/desktop.png';
 		Claude Code, CAD apps.
 	</Card>
 	<Card title="Built for speed" icon="rocket">
-		The [crate engine](/engine/) is written from scratch in Rust: an
+		The [crate engine](/crate/engine/) is written from scratch in Rust: an
 		arm64-to-arm64 translator that copies most guest instructions as they are
 		and rewrites only what touches the machine.
 	</Card>
@@ -58,7 +58,7 @@ import desktop from '../../assets/media/desktop.png';
 	</Card>
 	<Card title="Made for the phone" icon="approve-check">
 		Touch is a tablet, a key row adds Esc, Ctrl, Super, Tab, function keys and
-		arrows, and the desktop follows the phone as it turns or folds.
+		arrows, and the desktop follows the phone as it turns.
 	</Card>
 	<Card title="Open source" icon="open-book">
 		The app and the engine are MPL-2.0, and every library they carry is built
@@ -77,25 +77,11 @@ import desktop from '../../assets/media/desktop.png';
 
 		Plug in a monitor and the desktop fills it at the monitor's own
 		resolution, while the iPhone or iPad becomes its trackpad.
-		[More on monitors →](/guides/external-monitor/)
+		[More on monitors →](/crate/guides/external-monitor/)
 	</div>
 </div>
 
 <div class="feature-row flip">
-	<Clip
-		alt="An iPhone Duo folding and unfolding while the Linux desktop reflows to fit"
-		todo="Clip C · 10 s, camera: unfold the Duo, then fold it, and the desktop follows each time."
-	/>
-	<div>
-		### The desktop follows the fold
-
-		Turn the phone and the desktop turns with it. On iPhone Duo, crate has
-		layouts of its own for the open and folded screens.
-		[See every feature →](/features/)
-	</div>
-</div>
-
-<div class="feature-row">
 	<Clip
 		poster={chromeGpu}
 		alt="Chrome's chrome://gpu page listing canvas, compositing, WebGL and WebGPU as hardware accelerated"
@@ -106,6 +92,7 @@ import desktop from '../../assets/media/desktop.png';
 
 		The guest's OpenGL runs on the iPhone's GPU. Chrome's own GPU page shows
 		canvas, compositing, WebGL and WebGPU in hardware.
+		[See every feature →](/crate/features/)
 	</div>
 </div>
 
@@ -134,7 +121,7 @@ in seconds; shorter is faster:
 </div>
 
 On an iPhone Duo, the desktop is drawn 6.3 s after the app opens.
-[The numbers →](/engine/)
+[The numbers →](/crate/engine/)
 
 ## Gallery
 
@@ -147,10 +134,10 @@ On an iPhone Duo, the desktop is drawn 6.3 s after the app opens.
 <YouTube
 	title="crate in 2 minutes"
 	poster={desktop}
-	todo="See LAUNCH.md, video 1: install a VM, boot it, a browser, Claude Code, a monitor, the Duo's fold. Captions, no voice needed."
+	todo="See LAUNCH.md, video 1: install a VM, boot it, a browser, Claude Code, a monitor and trackpad, the iPad. Captions, no voice needed."
 />
 
-<LinkButton href="/gallery/" variant="secondary" icon="right-arrow">More in the gallery</LinkButton>
+<LinkButton href="/crate/gallery/" variant="secondary" icon="right-arrow">More in the gallery</LinkButton>
 
 ## Try it
 
@@ -158,4 +145,4 @@ crate needs JIT, which iOS gives only to an app a debugger has attached to, so
 it can't come from the App Store. Each release has an IPA you sign with your own
 Apple account on a Mac.
 
-<LinkButton href="/install/" icon="right-arrow">Install crate</LinkButton>
+<LinkButton href="/crate/install/" icon="right-arrow">Install crate</LinkButton>

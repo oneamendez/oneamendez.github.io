@@ -12,7 +12,7 @@ whole app's speed, and that's where help counts most.
 Faster translation, startup and graphics in the engine, measured by real
 benchmarks: timings of what people actually do, such as booting to a desktop,
 opening apps and building code, on the iPhone itself, so every change shows what
-it gains. Today's numbers are on [Engine and speed](/engine/).
+it gains. Today's numbers are on [Engine and speed](/crate/engine/).
 
 ## 2. Monitors and devices
 
