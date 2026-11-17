@@ -66,9 +66,9 @@ computer name like `demo` and `crate`, not your own (today's `desktop.png` shows
 `amendez@ubuntu`), and keep notifications, Wi-Fi names and other people's
 names out of frame.
 
-- iPhone, portrait: Home with 2–3 VM cards; the Install tab; the account sheet
-  (a made-up user name); a VM's settings with the memory picker; Settings with
-  JIT on; the serial console.
+- iPhone, portrait: Home with 2–3 VM cards; a VM's settings with the memory
+  picker; Settings with JIT on; the serial console. (Done: the Install tab and
+  the account sheet.)
 - The five desktops, same device and orientation: Ubuntu GNOME (have), Debian
   KDE, Debian Xfce, Arch KDE (have), Arch Xfce.
 - Apps: a browser on a real site, LibreOffice or GIMP.
