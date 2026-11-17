@@ -11,6 +11,7 @@ import chromeGpu from '../../assets/media/chrome-gpu.png';
 import gpuPoster from '../../assets/media/gpu-clip-poster.jpg';
 import solidcraft from '../../assets/media/solidcraft.png';
 import installTab from '../../assets/media/install-tab.png';
+import serialConsole from '../../assets/media/serial-console.png';
 import ipadPoster from '../../assets/media/ipad-clip-poster.jpg';
 import accountSheet from '../../assets/media/account-sheet.png';
 
@@ -79,14 +80,7 @@ or iPad becomes its trackpad.
 Each VM's serial console is a tab away from its desktop, for when you want a
 plain terminal, or to watch it boot.
 
-<div class="shots">
-	<Shot alt="The VM's serial console showing the end of the boot and a login prompt" todo="iPhone: the console tab, with the last boot messages and a prompt." caption="The serial console." />
-</div>
-
-## JIT, built in
-
-crate turns on JIT itself with its built-in StikJIT, or with StikDebug if you
-already use it. [Turning on JIT →](/crate/guides/jit/)
+<Shot src={serialConsole} alt="crate's serial console on an iPhone Duo: Ubuntu 26.04.1 LTS finishes booting, a login, and a shell prompt, with the key row's Esc, Ctrl, function and arrow keys above the keyboard" caption="The serial console: the end of the boot, a login, and a shell." />
 
 ## Logs for bug reports
 
