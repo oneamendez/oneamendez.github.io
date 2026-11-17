@@ -52,7 +52,7 @@ microphone off.
 
 | | Where | What |
 |---|---|---|
-| A | Home, hero | **Done:** `public/media/showcase.mp4`, 15 s spliced from a Duo and an iPad recording, sped-up parts captioned with their speed. |
+| A | Home, hero | **Done:** `public/media/showcase.mp4`, 21 s at 60 fps from three recordings (Duo boot and Claude Code, an iPad Chrome search, Big Buck Bunny playing on YouTube in real time), sped-up parts captioned. Big Buck Bunny is CC BY 3.0: keep its credit under the clip. |
 | B | Home, Features, Gallery | Camera on a tripod: the iPhone plugged into a monitor, a finger on the phone moves the pointer and opens a window. |
 | D | Home | Chrome in the VM running a WebGL demo. |
 | E | Features | Rotate the phone; the desktop resizes to fit. |

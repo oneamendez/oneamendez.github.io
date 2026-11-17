@@ -23,6 +23,20 @@
 	}
 }
 
+/* The hero's clip, with the credit for the film it shows under it. */
+.hero-media {
+	width: 100%;
+}
+.hero-credit {
+	margin: 0.4rem 0 0;
+	font-size: var(--sl-text-xs);
+	color: var(--sl-color-gray-3);
+	text-align: end;
+}
+.hero-credit a {
+	color: inherit;
+}
+
 /* The hero's picture or clip, rounded like a screen. */
 .hero-clip {
 	position: relative;
