@@ -2,8 +2,9 @@
 
 The website for [crate](https://github.com/oneamendez/crate-ios), which runs
 Linux VMs on iPhone and iPad. Built with [Astro](https://astro.build) and
-[Starlight](https://starlight.astro.build); it will be published at
-https://oneamendez.github.io/crate/. It isn't yet: see [LAUNCH.md](LAUNCH.md).
+[Starlight](https://starlight.astro.build), and published at
+https://oneamendez.github.io/crate/ by the Deploy workflow (Actions › Deploy ›
+Run workflow), which runs only when started by hand.
 
 crate's site is under `/crate/`, so the root of oneamendez.github.io stays free
 for other projects. `root/index.html` is the root's page: for now, a link on to

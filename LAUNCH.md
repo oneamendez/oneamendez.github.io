@@ -1,8 +1,8 @@
 # Launch checklist
 
-The site is private and not published. GitHub Pages is off, and the Deploy
-workflow only runs when started by hand. Nothing below happens without the
-owner's go-ahead.
+Published on 2026-11-17 at https://oneamendez.github.io/crate/: the repository
+is public, GitHub Pages deploys from GitHub Actions, and the Deploy workflow
+runs only when started by hand, so a change goes live when it's run again.
 
 ## Before launch
 
