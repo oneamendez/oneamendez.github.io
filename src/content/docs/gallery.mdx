@@ -1,69 +1,51 @@
 ---
 title: Gallery
-description: Screenshots, photos and videos of crate running Linux on iPhone and iPad.
+description: Videos and screenshots of crate running Linux on iPhone and iPad.
+tableOfContents: false
 ---
 
 import Clip from '../../components/Clip.astro';
 import Shot from '../../components/Shot.astro';
-import YouTube from '../../components/YouTube.astro';
 import desktop from '../../assets/media/desktop.png';
 import kde from '../../assets/media/kde.png';
 import solidcraft from '../../assets/media/solidcraft.png';
 import chromeGpu from '../../assets/media/chrome-gpu.png';
-import displaySettings from '../../assets/media/display-settings.png';
-import installTab from '../../assets/media/install-tab.png';
-import serialConsole from '../../assets/media/serial-console.png';
 import chromeGithub from '../../assets/media/chrome-github.png';
-import ipadPoster from '../../assets/media/ipad-clip-poster.jpg';
-import accountSheet from '../../assets/media/account-sheet.png';
+import displaySettings from '../../assets/media/display-settings.png';
 import monitor from '../../assets/media/monitor.png';
+import installTab from '../../assets/media/install-tab.png';
+import accountSheet from '../../assets/media/account-sheet.png';
+import serialConsole from '../../assets/media/serial-console.png';
+import showcasePoster from '../../assets/media/showcase-poster.jpg';
 import monitorPoster from '../../assets/media/monitor-clip-poster.jpg';
 import gpuPoster from '../../assets/media/gpu-clip-poster.jpg';
+import ipadPoster from '../../assets/media/ipad-clip-poster.jpg';
 
 ## Videos
 
-<div class="shots">
-	<YouTube title="crate in 2 minutes" poster={desktop} todo="Video 1 in LAUNCH.md." />
-	<YouTube title="Installing crate, start to finish" todo="Video 2 in LAUNCH.md." />
-	<YouTube title="Boot to desktop, in real time" todo="Video 3 in LAUNCH.md." />
-</div>
-
-## Desktops
-
-<div class="shots">
-	<Shot src={desktop} alt="Ubuntu's GNOME desktop with a terminal open, landscape on an iPhone Duo" caption="Ubuntu 26.04 LTS with GNOME." />
-	<Shot src={kde} alt="KDE Plasma's desktop with its application menu open, on an iPhone Duo" caption="Arch Linux ARM with KDE Plasma." />
-	<Shot alt="Debian with KDE Plasma" todo="Debian 13 with KDE Plasma, same device and orientation as the others." caption="Debian 13 with KDE Plasma." />
-	<Shot alt="Debian with Xfce" todo="Debian 13 with Xfce, same device and orientation." caption="Debian 13 with Xfce." />
-	<Shot alt="Arch Linux ARM with Xfce" todo="Arch Linux ARM with Xfce, same device and orientation." caption="Arch Linux ARM with Xfce." />
-</div>
-
-## Apps
-
-<div class="shots">
-	<Clip src="/media/gpu.mp4" poster={gpuPoster} alt="glmark2's jellyfish, ideas, shading and refraction scenes in real time on an iPhone Duo, then Google's WebGL Aquarium in Chrome with 500 fish at about 60 frames a second. Captions give the results." caption="glmark2 and the WebGL Aquarium, on the iPhone's GPU." />
-	<Shot src={solidcraft} alt="SolidCraft, a 3D CAD app, with a chair model beside a terminal running Claude Code, in GNOME on an iPhone Duo" caption="Claude Code builds a chair in SolidCraft, a 3D CAD app." />
-	<Shot src={chromeGpu} alt="Chrome's chrome://gpu page listing canvas, compositing, WebGL and WebGPU as hardware accelerated" caption="Chrome with GPU acceleration." />
-	<Shot src={displaySettings} alt="GNOME's Displays settings with the resolution set to 1280 by 800" caption="The VM sets its own resolution." />
-	<Shot src={chromeGithub} alt="Chrome on Ubuntu's GNOME desktop on an iPhone Duo, showing crate's GitHub repository page" caption="A full desktop browser: Chrome on an iPhone Duo." />
-	<Shot alt="An office suite or image editor in the VM" todo="LibreOffice or GIMP with a document open." caption="Office and creative apps." />
-</div>
-
-## Devices
-
-<div class="shots">
-	<Shot src={monitor} alt="Ubuntu's GNOME desktop filling an external monitor, with an iPhone Duo below it showing crate's trackpad" caption="An external monitor, the iPhone Duo as its trackpad." />
+<div class="gallery">
+	<Clip src="/media/showcase.mp4" poster={showcasePoster} alt="crate starts Ubuntu on an iPhone Duo; on an iPad Pro, Chrome searches for Big Buck Bunny and plays it on YouTube in real time; then Claude Code builds a chair in SolidCraft. Captions mark the parts shown sped up." caption="crate in 21 seconds: iPhone, iPad, YouTube and Claude Code." />
+	<Clip src="/media/gpu.mp4" poster={gpuPoster} alt="glmark2's jellyfish, ideas, shading and refraction scenes in real time on an iPhone Duo, then Google's WebGL Aquarium in Chrome with 500 fish at about 60 frames a second. Captions give the results." caption="GPU: glmark2 and the WebGL Aquarium, in real time." />
+	<Clip src="/media/monitor.mp4" poster={monitorPoster} alt="An iPhone Duo is plugged into a monitor, starts Ubuntu, which fills the monitor, then works as its trackpad and keyboard to open Chrome and search. Captions mark the parts shown sped up." caption="An external monitor, the iPhone as its trackpad." />
 	<Clip src="/media/ipad.mp4" poster={ipadPoster} alt="An iPad with a keyboard and trackpad runs Ubuntu: the keyboard opens the app grid and types a search in Chrome, and the trackpad clicks and scrolls GitHub. Captions mark the parts shown sped up." caption="An iPad with a keyboard and trackpad." />
-	<Clip src="/media/monitor.mp4" poster={monitorPoster} alt="An iPhone Duo is plugged into a monitor, starts Ubuntu, which fills the monitor, then works as its trackpad and keyboard to open Chrome and search. Captions mark the parts shown sped up." caption="Plug in a monitor: Ubuntu fills it, and the iPhone is its trackpad." />
 </div>
 
-## The app
+The Big Buck Bunny clip in the first video is © Blender Foundation,
+[bigbuckbunny.org](https://peach.blender.org/), [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
 
-<div class="shots">
-	<Shot src={installTab} alt="crate's Install tab on an iPhone Duo: Debian, Ubuntu and Arch Linux ARM with their desktops and download sizes, a memory picker from 2 to 12 GB, a disk slider at 64 GB, and an Install Debian button" caption="The Install tab: pick an image, a memory limit and a disk size." />
-	<Shot src={accountSheet} alt="The Install Debian sheet asking for a user name, a password and the computer's name on the network" caption="Each VM gets an account of your own." />
-	<Shot alt="crate's Home tab with VM cards" todo="iPhone, portrait: Home with two or three VM cards." caption="Home: one card per VM." />
-	<Shot src={serialConsole} alt="crate's serial console on an iPhone Duo: Ubuntu 26.04.1 LTS finishes booting, a login, and a shell prompt, with the key row's Esc, Ctrl, function and arrow keys above the keyboard" caption="The serial console, a tab away from the desktop." />
-	<Shot alt="crate's Settings tab with JIT, memory and logs" todo="iPhone, portrait: Settings with JIT on." caption="Settings." />
-	<Shot alt="A VM's settings with the memory picker" todo="iPhone, portrait: a VM's settings sheet with the 2–12 GB picker." caption="A VM's settings." />
+## Screenshots
+
+Click a screenshot to see it full size.
+
+<div class="gallery">
+	<Shot zoom src={desktop} alt="Ubuntu's GNOME desktop with a terminal open, landscape on an iPhone Duo" caption="Ubuntu 26.04 LTS with GNOME." />
+	<Shot zoom src={kde} alt="KDE Plasma's desktop with its application menu open, on an iPhone Duo" caption="Arch Linux ARM with KDE Plasma." />
+	<Shot zoom src={solidcraft} alt="SolidCraft, a 3D CAD app, with a chair model beside a terminal running Claude Code, in GNOME on an iPhone Duo" caption="Claude Code builds a chair in SolidCraft." />
+	<Shot zoom src={chromeGithub} alt="Chrome on Ubuntu's GNOME desktop on an iPhone Duo, showing crate's GitHub repository page" caption="Chrome on an iPhone Duo." />
+	<Shot zoom src={chromeGpu} alt="Chrome's chrome://gpu page listing canvas, compositing, WebGL and WebGPU as hardware accelerated" caption="Chrome's GPU page: hardware accelerated." />
+	<Shot zoom src={monitor} alt="Ubuntu's GNOME desktop filling an external monitor, with an iPhone Duo below it showing crate's trackpad" caption="An external monitor, the iPhone Duo as its trackpad." />
+	<Shot zoom src={displaySettings} alt="GNOME's Displays settings with the resolution set to 1280 by 800" caption="The VM sets its own resolution." />
+	<Shot zoom src={serialConsole} alt="crate's serial console on an iPhone Duo: Ubuntu 26.04.1 LTS finishes booting, a login, and a shell prompt, with the key row's Esc, Ctrl, function and arrow keys above the keyboard" caption="The serial console." />
+	<Shot zoom src={installTab} alt="crate's Install tab on an iPhone Duo: Debian, Ubuntu and Arch Linux ARM with their desktops and download sizes, a memory picker from 2 to 12 GB, a disk slider at 64 GB, and an Install Debian button" caption="The Install tab." />
+	<Shot zoom src={accountSheet} alt="The Install Debian sheet asking for a user name, a password and the computer's name on the network" caption="Each VM gets an account of your own." />
 </div>

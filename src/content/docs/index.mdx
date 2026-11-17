@@ -30,12 +30,10 @@ hero:
 import { Card, CardGrid, LinkButton } from '@astrojs/starlight/components';
 import Clip from '../../components/Clip.astro';
 import Shot from '../../components/Shot.astro';
-import YouTube from '../../components/YouTube.astro';
 import monitorPoster from '../../assets/media/monitor-clip-poster.jpg';
 import gpuPoster from '../../assets/media/gpu-clip-poster.jpg';
 import solidcraft from '../../assets/media/solidcraft.png';
 import kde from '../../assets/media/kde.png';
-import desktop from '../../assets/media/desktop.png';
 import chromeGithub from '../../assets/media/chrome-github.png';
 
 ## Why crate
@@ -135,11 +133,6 @@ On an iPhone Duo, the desktop is drawn 6.3 s after the app opens.
 	<Shot src={chromeGithub} alt="Chrome on Ubuntu's GNOME desktop on an iPhone Duo, showing crate's GitHub repository page" caption="Chrome on Ubuntu, on an iPhone Duo." />
 </div>
 
-<YouTube
-	title="crate in 2 minutes"
-	poster={desktop}
-	todo="See LAUNCH.md, video 1: install a VM, boot it, a browser, Claude Code, a monitor and trackpad, the iPad. Captions, no voice needed."
-/>
 
 <LinkButton href="/crate/gallery/" variant="secondary" icon="right-arrow">More in the gallery</LinkButton>
 

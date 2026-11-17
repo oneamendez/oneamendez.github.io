@@ -15,7 +15,8 @@
 	--sl-color-accent-high: #12305f;
 }
 
-:root:has(.hero-brand) {
+:root:has(.hero-brand),
+:root:has(.gallery) {
 	--sl-content-width: 64rem;
 }
 
@@ -182,6 +183,44 @@
 	margin-top: 0.4rem;
 	font-size: var(--sl-text-sm);
 	color: var(--sl-color-gray-2);
+}
+
+/* The Gallery: three columns of tiles the same size. Each picture or video
+   shows whole inside its tile (portrait ones on a dark backdrop), so nothing
+   is cropped. */
+.gallery {
+	display: grid;
+	gap: 1.25rem 1rem;
+	grid-template-columns: 1fr;
+	margin-block: 1.5rem;
+}
+@media (min-width: 40rem) {
+	.gallery {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+@media (min-width: 64rem) {
+	.gallery {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+.gallery > * {
+	margin: 0 !important;
+}
+.gallery .shot img,
+.gallery .shot video {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 11;
+	object-fit: contain;
+	background: #0b0c0f;
+}
+.gallery .shot a {
+	display: block;
+}
+.gallery .shot a:hover img {
+	outline: 2px solid var(--sl-color-accent);
+	outline-offset: 2px;
 }
 
 /* The speed figures. */

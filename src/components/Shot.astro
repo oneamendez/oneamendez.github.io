@@ -1,6 +1,7 @@
 ---
 // A screenshot or photo with its caption. Without `src` it's a placeholder
-// that says what to capture, so the preview shows where it goes.
+// that says what to capture, so the preview shows where it goes. With `zoom`,
+// clicking it opens the full-size picture.
 import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 
@@ -10,14 +11,22 @@ interface Props {
 	caption?: string;
 	/** For a placeholder: what the picture should show. */
 	todo?: string;
+	/** Link the picture to its full-size version. */
+	zoom?: boolean;
 }
-const { src, alt, caption, todo } = Astro.props;
+const { src, alt, caption, todo, zoom } = Astro.props;
 ---
 
 <figure class="shot">
 	{
 		src ? (
-			<Image src={src} alt={alt} widths={[640, 960, 1400]} sizes="(min-width: 50rem) 50vw, 100vw" />
+			zoom ? (
+				<a href={src.src} target="_blank" rel="noopener" aria-label={`${alt} (full size)`}>
+					<Image src={src} alt={alt} widths={[640, 960, 1400]} sizes="(min-width: 50rem) 33vw, 100vw" />
+				</a>
+			) : (
+				<Image src={src} alt={alt} widths={[640, 960, 1400]} sizes="(min-width: 50rem) 50vw, 100vw" />
+			)
 		) : (
 			<div class="todo todo-empty" role="img" aria-label={`Placeholder: ${alt}`}>
 				<strong>Screenshot to take</strong>
