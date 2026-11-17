@@ -40,7 +40,9 @@ re-encoding and writes to `youtube/`:
 
     npm run media -- --youtube incoming/my-video.mov
 
-Videos need ffmpeg: `brew install ffmpeg`.
+Videos need ffmpeg: `brew install ffmpeg`. An MP4 that's already encoded can be
+cleaned without it, in place: `node scripts/scrub-mp4.mjs file.mp4` zeroes its
+dates and blanks its metadata boxes.
 
 ## Clips for the site (short, muted, looping)
 
@@ -50,7 +52,7 @@ microphone off.
 
 | | Where | What |
 |---|---|---|
-| A | Home, hero | Tap Start on the Duo, the GNOME desktop comes up, a terminal opens. Real time. |
+| A | Home, hero | **Done:** `public/media/showcase.mp4`, 15 s spliced from a Duo and an iPad recording, sped-up parts captioned with their speed. |
 | B | Home, Features, Gallery | Camera on a tripod: the iPhone plugged into a monitor, a finger on the phone moves the pointer and opens a window. |
 | D | Home | Chrome in the VM running a WebGL demo. |
 | E | Features | Rotate the phone; the desktop resizes to fit. |
