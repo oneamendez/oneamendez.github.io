@@ -3,13 +3,18 @@
 // (iMessage, Slack, X, Discord…): crate's icon, name and tagline beside a
 // desktop screenshot. Also usable as crate-ios's social preview on GitHub.
 //
-//     node scripts/make-social-card.mjs
+//     node scripts/make-social-card.mjs [screenshot] [output]
+//
+// The screenshot defaults to Claude Code building a chair in SolidCraft; the
+// output to
+// public/social-card.png.
 
 import sharp from 'sharp';
 
 const W = 1280;
 const H = 640;
-const SHOT = 'src/assets/media/kde.png';
+const SHOT = process.argv[2] ?? 'src/assets/media/solidcraft.png';
+const OUT = process.argv[3] ?? 'public/social-card.png';
 const SHOT_W = 560;
 
 const shotMeta = await sharp(SHOT).metadata();
@@ -48,6 +53,6 @@ await sharp({ create: { width: W, height: H, channels: 3, background: '#0f1115' 
 		{ input: shot, left: W - SHOT_W - 64, top: Math.round((H - shotH) / 2) },
 	])
 	.png({ compressionLevel: 9 })
-	.toFile('public/social-card.png');
+	.toFile(OUT);
 
-console.log('✓ public/social-card.png');
+console.log(`✓ ${OUT}`);

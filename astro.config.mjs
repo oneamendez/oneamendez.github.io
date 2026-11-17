@@ -10,7 +10,7 @@ const SIDEBAR_STATE = `try{if(localStorage.getItem('crate-sidebar')==='hidden')d
 
 const SITE = 'https://oneamendez.github.io';
 const CARD = `${SITE}/crate/social-card.png`;
-const CARD_ALT = "crate: Linux desktops on your iPhone and iPad. crate's icon beside a KDE Plasma desktop on an iPhone.";
+const CARD_ALT = "crate: Linux desktops on your iPhone and iPad. crate's icon beside Claude Code building a chair in SolidCraft, a 3D CAD app, on Ubuntu on an iPhone.";
 
 // https://astro.build/config
 export default defineConfig({
