@@ -31,7 +31,7 @@ import { Card, CardGrid, LinkButton } from '@astrojs/starlight/components';
 import Clip from '../../components/Clip.astro';
 import Shot from '../../components/Shot.astro';
 import YouTube from '../../components/YouTube.astro';
-import monitor from '../../assets/media/monitor.png';
+import monitorPoster from '../../assets/media/monitor-clip-poster.jpg';
 import chromeGpu from '../../assets/media/chrome-gpu.png';
 import solidcraft from '../../assets/media/solidcraft.png';
 import kde from '../../assets/media/kde.png';
@@ -70,9 +70,9 @@ import desktop from '../../assets/media/desktop.png';
 
 <div class="feature-row">
 	<Clip
-		poster={monitor}
-		alt="Ubuntu's GNOME desktop filling an external monitor, with an iPhone Duo below it showing crate's trackpad"
-		todo="Clip B · 10–15 s, camera on a tripod: the iPhone plugged into a monitor, a finger on the phone moves the pointer and opens a window."
+		src="/media/monitor.mp4"
+		poster={monitorPoster}
+		alt="An iPhone Duo is plugged into a monitor, starts Ubuntu, which fills the monitor, then works as its trackpad and keyboard to open Chrome and search. Captions mark the parts shown sped up."
 	/>
 	<div>
 		### An external monitor is the VM's screen

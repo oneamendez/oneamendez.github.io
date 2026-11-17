@@ -6,6 +6,7 @@ description: Everything crate does, from installing a distribution to driving an
 import Clip from '../../components/Clip.astro';
 import Shot from '../../components/Shot.astro';
 import monitor from '../../assets/media/monitor.png';
+import monitorPoster from '../../assets/media/monitor-clip-poster.jpg';
 import chromeGpu from '../../assets/media/chrome-gpu.png';
 import solidcraft from '../../assets/media/solidcraft.png';
 import displaySettings from '../../assets/media/display-settings.png';
@@ -67,6 +68,7 @@ or iPad becomes its trackpad.
 [External monitor →](/crate/guides/external-monitor/)
 
 <div class="shots">
+	<Clip src="/media/monitor.mp4" poster={monitorPoster} alt="An iPhone Duo is plugged into a monitor, starts Ubuntu, which fills the monitor, then works as its trackpad and keyboard to open Chrome and search. Captions mark the parts shown sped up." caption="From plugging in to searching the web, on a monitor." />
 	<Shot src={monitor} alt="Ubuntu's GNOME desktop filling an external monitor, with an iPhone Duo below it showing crate's trackpad" caption="Ubuntu on a monitor, the iPhone Duo as its trackpad." />
 </div>
 
