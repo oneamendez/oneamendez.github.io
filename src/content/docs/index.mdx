@@ -32,7 +32,7 @@ import Clip from '../../components/Clip.astro';
 import Shot from '../../components/Shot.astro';
 import YouTube from '../../components/YouTube.astro';
 import monitorPoster from '../../assets/media/monitor-clip-poster.jpg';
-import chromeGpu from '../../assets/media/chrome-gpu.png';
+import gpuPoster from '../../assets/media/gpu-clip-poster.jpg';
 import solidcraft from '../../assets/media/solidcraft.png';
 import kde from '../../assets/media/kde.png';
 import desktop from '../../assets/media/desktop.png';
@@ -85,15 +85,16 @@ import desktop from '../../assets/media/desktop.png';
 
 <div class="feature-row flip">
 	<Clip
-		poster={chromeGpu}
-		alt="Chrome's chrome://gpu page listing canvas, compositing, WebGL and WebGPU as hardware accelerated"
-		todo="Clip D · 10–15 s, screen recording: Chrome in the VM running a WebGL demo smoothly."
+		src="/media/gpu.mp4"
+		poster={gpuPoster}
+		alt="glmark2's jellyfish, ideas, shading and refraction scenes in real time on an iPhone Duo, then Google's WebGL Aquarium in Chrome with 500 fish at about 60 frames a second. Captions give the results."
 	/>
 	<div>
 		### GPU-accelerated desktops
 
-		The guest's OpenGL runs on the iPhone's GPU. Chrome's own GPU page shows
-		canvas, compositing, WebGL and WebGPU in hardware.
+		The guest's OpenGL ES 3.1 runs on the iPhone's GPU. On an iPhone Duo,
+		glmark2 scores 1092 across four of its 3D scenes, and Chrome runs the
+		WebGL Aquarium with 500 fish at about 60 frames a second.
 		[See every feature →](/crate/features/)
 	</div>
 </div>

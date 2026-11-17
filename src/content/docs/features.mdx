@@ -8,6 +8,7 @@ import Shot from '../../components/Shot.astro';
 import monitor from '../../assets/media/monitor.png';
 import monitorPoster from '../../assets/media/monitor-clip-poster.jpg';
 import chromeGpu from '../../assets/media/chrome-gpu.png';
+import gpuPoster from '../../assets/media/gpu-clip-poster.jpg';
 import solidcraft from '../../assets/media/solidcraft.png';
 import displaySettings from '../../assets/media/display-settings.png';
 
@@ -37,7 +38,15 @@ The guest's OpenGL runs on the iPhone's GPU through virglrenderer, ANGLE and
 MoltenVK. Desktops composite in hardware, browsers accelerate canvas, WebGL and
 WebGPU, and 3D apps render on the GPU.
 
+On an iPhone Duo (A20 Pro), with OpenGL ES 3.1 at 952 × 608:
+
+- **glmark2**, the standard Linux OpenGL benchmark, scores 1092 across four of
+  its scenes: jellyfish 982 fps, ideas 1278, phong shading 1113, refraction 1001.
+- **The WebGL Aquarium** in Chrome runs 500 fish at about 60 frames a second, the
+  screen's refresh rate.
+
 <div class="shots">
+	<Clip src="/media/gpu.mp4" poster={gpuPoster} alt="glmark2's jellyfish, ideas, shading and refraction scenes in real time on an iPhone Duo, then Google's WebGL Aquarium in Chrome with 500 fish at about 60 frames a second. Captions give the results." caption="glmark2, then the WebGL Aquarium, in real time." />
 	<Shot src={chromeGpu} alt="Chrome's chrome://gpu page listing canvas, compositing, WebGL and WebGPU as hardware accelerated" caption="Chrome's GPU page in the VM." />
 	<Shot src={solidcraft} alt="SolidCraft, a 3D CAD app, with a chair model beside a terminal running Claude Code" caption="SolidCraft, a 3D CAD app, driven by Claude Code." />
 </div>
