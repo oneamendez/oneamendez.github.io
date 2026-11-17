@@ -1,5 +1,8 @@
-/* crate's blue, from the icon's background, as Starlight's accent. */
+/* crate's blue, from the icon's background, as Starlight's accent. Content
+   is a little wider than Starlight's 45rem, and the home page, which is mostly
+   clips and cards, wider still. */
 :root {
+	--sl-content-width: 50rem;
 	--sl-color-accent-low: #10264a;
 	--sl-color-accent: #3d7fe6;
 	--sl-color-accent-high: #c3dafc;
@@ -10,6 +13,10 @@
 	--sl-color-accent-low: #d6e5fd;
 	--sl-color-accent: #2563c9;
 	--sl-color-accent-high: #12305f;
+}
+
+:root:has(.hero-brand) {
+	--sl-content-width: 64rem;
 }
 
 /* The sidebar, hidden by the header's button (SidebarToggle.astro). Only on
@@ -90,16 +97,34 @@
 	color: #ffd38a;
 }
 
-/* A feature: its heading and text, then its clip at the column's full width,
-   so the clip is big enough to see (the pages' markup has the clip first). */
+/* A feature: its clip in about 60% of the row and its text beside it,
+   alternating sides (.flip puts the clip on the right). Narrower screens stack
+   them, text first. */
 .feature-row {
-	display: flex;
-	flex-direction: column-reverse;
-	gap: 1rem;
-	margin-block: 2.5rem;
+	display: grid;
+	gap: 1.25rem 2rem;
+	align-items: center;
+	margin-block: 3rem;
 }
 .feature-row > * {
 	margin: 0 !important;
+}
+.feature-row > figure {
+	order: 2;
+}
+@media (min-width: 72rem) {
+	.feature-row {
+		grid-template-columns: 3fr 2fr;
+	}
+	.feature-row > figure {
+		order: 0;
+	}
+	.feature-row.flip {
+		grid-template-columns: 2fr 3fr;
+	}
+	.feature-row.flip > figure {
+		order: 2;
+	}
 }
 .feature-row h3 {
 	margin-top: 0;
