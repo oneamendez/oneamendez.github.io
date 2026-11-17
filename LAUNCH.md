@@ -6,9 +6,8 @@ owner's go-ahead.
 
 ## Before launch
 
-- [ ] The social card made (1280 × 640: icon, "crate", the tagline, a desktop
-      screenshot) and added to `astro.config.mjs`'s `head`, and as crate-ios's
-      social preview (repo Settings › General › Social preview).
+- [x] The social card: `public/social-card.png` (`scripts/make-social-card.mjs`),
+      in every page's link-preview tags.
 - [ ] `npm run build` passes, which also checks that no image or video carries
       metadata.
 
@@ -19,7 +18,12 @@ owner's go-ahead.
 3. Actions › Deploy › Run workflow. The site appears at
    https://oneamendez.github.io/crate/ a minute later.
 4. Set https://oneamendez.github.io/crate/ as crate-ios's website (repo › About ›
-   Website).
+   Website), and upload `public/social-card.png` as its social preview (repo
+   Settings › General › Social preview).
+5. Search engines: add https://oneamendez.github.io/ to Google Search Console
+   and Bing Webmaster Tools. Their verification file goes in `root/` (it's
+   published at the site's root), then submit
+   https://oneamendez.github.io/crate/sitemap-index.xml in each.
 
 ## Adding pictures and videos
 

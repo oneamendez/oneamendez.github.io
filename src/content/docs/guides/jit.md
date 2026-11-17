@@ -1,6 +1,6 @@
 ---
 title: Turning on JIT
-description: Why crate needs JIT, and the two ways to turn it on.
+description: "Why crate needs JIT to run Linux VMs on iPhone and iPad, and how to turn it on with the built-in StikJIT or with StikDebug."
 ---
 
 crate translates the guest's code into the iPhone's as it runs, and iOS lets an

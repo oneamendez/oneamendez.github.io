@@ -1,6 +1,6 @@
 ---
 title: Known issues
-description: What doesn't work yet, and how to get around it.
+description: "What doesn't work yet in crate's Linux VMs on iPhone and iPad, such as kernel updates and resizing on an external monitor, and how to get around it."
 ---
 
 ## A guest can't update its own kernel

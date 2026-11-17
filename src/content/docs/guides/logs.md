@@ -1,6 +1,6 @@
 ---
 title: Logs and bug reports
-description: What crate logs, how to share it, and where to report a bug.
+description: "What crate logs while it runs Linux VMs on iPhone and iPad, how to export the logs, and how to report a bug on GitHub."
 ---
 
 crate logs what it and the VM engine do, this launch and the last, so a log

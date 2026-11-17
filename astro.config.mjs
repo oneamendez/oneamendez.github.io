@@ -8,12 +8,16 @@ const REPO = 'https://github.com/oneamendez/crate-ios';
 // doesn't flash open. SidebarToggle.astro changes it.
 const SIDEBAR_STATE = `try{if(localStorage.getItem('crate-sidebar')==='hidden')document.documentElement.dataset.sidebarHidden=''}catch(e){}`;
 
+const SITE = 'https://oneamendez.github.io';
+const CARD = `${SITE}/crate/social-card.png`;
+const CARD_ALT = "crate: Linux desktops on your iPhone and iPad. crate's icon beside a KDE Plasma desktop on an iPhone.";
+
 // https://astro.build/config
 export default defineConfig({
 	// crate lives at /crate/, leaving the root of oneamendez.github.io for other
 	// projects. The build goes to dist/crate/, and scripts/site-root.mjs adds
 	// the root's own page beside it (see LAUNCH.md).
-	site: 'https://oneamendez.github.io',
+	site: SITE,
 	base: '/crate',
 	outDir: './dist/crate',
 	integrations: [
@@ -26,7 +30,14 @@ export default defineConfig({
 			head: [
 				{ tag: 'link', attrs: { rel: 'apple-touch-icon', href: '/crate/apple-touch-icon.png' } },
 				{ tag: 'script', content: SIDEBAR_STATE },
-				// The social card (1280 × 640) goes here once it's made; see LAUNCH.md.
+				// The picture link previews show (iMessage, Slack, X, Discord…),
+				// made by scripts/make-social-card.mjs.
+				{ tag: 'meta', attrs: { property: 'og:image', content: CARD } },
+				{ tag: 'meta', attrs: { property: 'og:image:width', content: '1280' } },
+				{ tag: 'meta', attrs: { property: 'og:image:height', content: '640' } },
+				{ tag: 'meta', attrs: { property: 'og:image:alt', content: CARD_ALT } },
+				{ tag: 'meta', attrs: { name: 'twitter:image', content: CARD } },
+				{ tag: 'meta', attrs: { name: 'twitter:image:alt', content: CARD_ALT } },
 			],
 			social: [{ icon: 'github', label: 'crate on GitHub', href: REPO }],
 			customCss: ['./src/styles/custom.css'],

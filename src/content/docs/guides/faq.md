@@ -1,6 +1,6 @@
 ---
 title: FAQ
-description: Common questions about crate.
+description: "Common questions about crate, the app that runs Linux VMs on iPhone and iPad: why it's not on the App Store, Macs, Apple accounts, offline use and emulation."
 ---
 
 ## Why isn't crate on the App Store?

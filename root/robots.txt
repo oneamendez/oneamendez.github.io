@@ -1,0 +1,5 @@
+# oneamendez.github.io. Everything may be crawled; the sitemap lists crate's pages.
+User-agent: *
+Allow: /
+
+Sitemap: https://oneamendez.github.io/crate/sitemap-index.xml

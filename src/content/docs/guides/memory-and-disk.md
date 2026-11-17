@@ -1,6 +1,6 @@
 ---
 title: Memory and disk
-description: Choosing a VM's memory and disk, and what iOS allows.
+description: "How much memory and disk a Linux VM in crate can have on an iPhone or iPad, what iOS allows, and which sizes work best."
 ---
 
 ## Memory
