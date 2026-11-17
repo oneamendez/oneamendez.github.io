@@ -4,9 +4,15 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>crate</title>
-		<!-- The root is kept for a page of projects later; for now it goes to crate. -->
-		<meta http-equiv="refresh" content="0; url=/crate/" />
+		<!-- The root of oneamendez.github.io. With one project, it sends visitors
+		     straight to crate; with more, this becomes a page listing them. -->
+		<meta name="robots" content="noindex" />
 		<link rel="canonical" href="https://oneamendez.github.io/crate/" />
+		<meta http-equiv="refresh" content="0; url=/crate/" />
+		<script>
+			// replace(), so Back doesn't return here and bounce forward again.
+			location.replace('/crate/' + location.search + location.hash);
+		</script>
 		<style>
 			body { font: 16px/1.6 system-ui, sans-serif; margin: 3rem auto; max-width: 32rem; padding: 0 1rem; }
 			@media (prefers-color-scheme: dark) { body { background: #17181c; color: #e6e6e6; } a { color: #8ab4ff; } }
