@@ -10,7 +10,6 @@ import monitorPoster from '../../assets/media/monitor-clip-poster.jpg';
 import chromeGpu from '../../assets/media/chrome-gpu.png';
 import gpuPoster from '../../assets/media/gpu-clip-poster.jpg';
 import solidcraft from '../../assets/media/solidcraft.png';
-import displaySettings from '../../assets/media/display-settings.png';
 import installTab from '../../assets/media/install-tab.png';
 import ipadPoster from '../../assets/media/ipad-clip-poster.jpg';
 import accountSheet from '../../assets/media/account-sheet.png';
@@ -32,7 +31,8 @@ workflow.
 
 A memory limit from 2 to 12 GB, which you can change later in the VM's
 settings, and a disk from 16 GB up, set at install. The disk is sparse: it takes
-space on the iPhone only as the VM writes.
+space on the iPhone only as the VM writes. If crate closes by itself, a smaller
+VM fixes it: see [Tips](/crate/guides/tips/).
 [Memory and disk →](/crate/guides/memory-and-disk/)
 
 ## GPU-accelerated
@@ -54,16 +54,6 @@ On an iPhone Duo (A20 Pro), with OpenGL ES 3.1 at 952 × 608:
 	<Shot src={solidcraft} alt="SolidCraft, a 3D CAD app, with a chair model beside a terminal running Claude Code" caption="SolidCraft, a 3D CAD app, driven by Claude Code." />
 </div>
 
-## Touch, keyboard and the key row
-
-Touch works as a tablet: tap to click, and drag to move windows. A hardware
-keyboard works as it is. The on-screen keyboard gets a key row above it with
-Esc, Ctrl, Super, Tab, function keys and arrows, the keys a terminal needs.
-
-<div class="shots">
-	<Clip alt="Typing in vim on the on-screen keyboard, using the key row's Esc, Ctrl and arrow keys" todo="Clip F · 10–15 s, screen recording: vim in a terminal, using Esc, Ctrl and the arrows from the key row." />
-</div>
-
 ## A mouse or trackpad on iPad
 
 A mouse or trackpad drives the desktop's pointer, with scrolling and right and
@@ -82,16 +72,6 @@ or iPad becomes its trackpad.
 <div class="shots">
 	<Clip src="/media/monitor.mp4" poster={monitorPoster} alt="An iPhone Duo is plugged into a monitor, starts Ubuntu, which fills the monitor, then works as its trackpad and keyboard to open Chrome and search. Captions mark the parts shown sped up." caption="From plugging in to searching the web, on a monitor." />
 	<Shot src={monitor} alt="Ubuntu's GNOME desktop filling an external monitor, with an iPhone Duo below it showing crate's trackpad" caption="Ubuntu on a monitor, the iPhone Duo as its trackpad." />
-</div>
-
-## The desktop fits the screen
-
-Turn the phone and the desktop turns with it, and the VM sets its own
-resolution, so it can fit more on screen.
-
-<div class="shots">
-	<Shot src={displaySettings} alt="GNOME's Displays settings with the resolution set to 1280 by 800" caption="The VM sets its own resolution." />
-	<Clip alt="Rotating an iPhone from portrait to landscape while the desktop follows" todo="Clip E · 8–10 s, screen recording: rotate the phone, and the desktop resizes to fit." />
 </div>
 
 ## The serial console

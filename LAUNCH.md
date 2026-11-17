@@ -55,8 +55,6 @@ microphone off.
 | A | Home, hero | **Done:** `public/media/showcase.mp4`, 21 s at 60 fps from three recordings (Duo boot and Claude Code, an iPad Chrome search, Big Buck Bunny playing on YouTube in real time), sped-up parts captioned. Big Buck Bunny is CC BY 3.0: keep its credit under the clip. |
 | B | Home, Features, Gallery | **Done:** `public/media/monitor.mp4`, 15 s from a camera recording: plugging the Duo into a monitor, Ubuntu filling it, the phone as trackpad and keyboard. Sped-up parts captioned. |
 | D | Home, Features, Gallery | **Done:** `public/media/gpu.mp4`, 18 s in real time: four glmark2 scenes (score 1092) and the WebGL Aquarium with 500 fish at about 60 fps, on the Duo. |
-| E | Features | Rotate the phone; the desktop resizes to fit. |
-| F | Features | vim in a terminal, using Esc, Ctrl and the arrows from the key row. |
 | G | Features, Gallery | **Done:** `public/media/ipad.mp4`, 13.5 s from a camera recording, cropped to the iPad: the keyboard opens the app grid and types in Chrome, the trackpad clicks and scrolls. |
 
 ## Screenshots and photos

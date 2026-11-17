@@ -61,6 +61,7 @@ export default defineConfig({
 				{
 					label: 'Help',
 					items: [
+						{ label: 'Tips', slug: 'guides/tips' },
 						{ label: 'Known issues', slug: 'guides/known-issues' },
 						{ label: 'FAQ', slug: 'guides/faq' },
 					],

@@ -24,7 +24,7 @@ ends it at once, as pulling the plug on a computer would.
 
 The desktop follows the iPhone as it turns. The VM
 sets its own resolution in its display settings: 1280 × 800 fits more on screen
-than the default. On a monitor, see [External monitor](/crate/guides/external-monitor/).
+than the default (see [Tips](/crate/guides/tips/)). On a monitor, see [External monitor](/crate/guides/external-monitor/).
 
 ## The serial console
 

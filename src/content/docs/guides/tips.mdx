@@ -1,0 +1,30 @@
+---
+title: Tips
+description: Small changes that make a VM easier to use, and what to do if crate closes by itself.
+---
+
+import Shot from '../../../components/Shot.astro';
+import displaySettings from '../../../assets/media/display-settings.png';
+
+## Fit more on the screen
+
+The desktop starts at a size that fits the screen, which can feel cramped on a
+phone. Pick a higher resolution in the VM's own display settings: in Ubuntu,
+**Settings › Displays › Resolution**. 1280 × 800 fits a lot more on an iPhone
+and stays readable.
+
+<Shot src={displaySettings} alt="GNOME's Displays settings in the VM, with the resolution set to 1280 by 800" caption="Ubuntu's Displays settings, at 1280 × 800." />
+
+## If crate closes by itself, lower the VM's memory
+
+If crate quits on its own while a VM is running, iOS most likely closed it for
+using more memory than iOS allows. Give the VM less:
+
+1. On the Home tab, open the VM card's **⋯** menu and choose **Edit Settings…**.
+2. Set **Memory Limit** to **2 GB**.
+3. Start the VM again. A change applies the next time it starts.
+
+A VM at 2 GB leaves more memory for the rest of crate and for iOS, so a heavy
+app such as Chrome is far less likely to get crate closed. A lighter desktop,
+such as Xfce, helps too. [Memory and disk](/crate/guides/memory-and-disk/) explains how much memory a
+VM can have.
