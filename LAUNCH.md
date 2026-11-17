@@ -57,7 +57,7 @@ microphone off.
 | D | Home, Features, Gallery | **Done:** `public/media/gpu.mp4`, 18 s in real time: four glmark2 scenes (score 1092) and the WebGL Aquarium with 500 fish at about 60 fps, on the Duo. |
 | E | Features | Rotate the phone; the desktop resizes to fit. |
 | F | Features | vim in a terminal, using Esc, Ctrl and the arrows from the key row. |
-| G | Features | iPad trackpad: right-click a file, scroll a page, drag a window. |
+| G | Features, Gallery | **Done:** `public/media/ipad.mp4`, 13.5 s from a camera recording, cropped to the iPad: the keyboard opens the app grid and types in Chrome, the trackpad clicks and scrolls. |
 
 ## Screenshots and photos
 
@@ -71,9 +71,9 @@ names out of frame.
   the account sheet.)
 - The five desktops, same device and orientation: Ubuntu GNOME (have), Debian
   KDE, Debian Xfce, Arch KDE (have), Arch Xfce.
-- Apps: a browser on a real site, LibreOffice or GIMP.
+- Apps: LibreOffice or GIMP. (Done: Chrome on a real site.)
 - iPad in landscape with Debian Xfce and the pointer visible.
-- Photo: the iPad with a keyboard on a desk.
+- (Done: the iPad with a keyboard, as clip G.)
 - Mac: Xcode's Signing & Capabilities with the two memory capabilities, the
   team name and email cropped out.
 

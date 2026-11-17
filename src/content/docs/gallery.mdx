@@ -12,6 +12,8 @@ import solidcraft from '../../assets/media/solidcraft.png';
 import chromeGpu from '../../assets/media/chrome-gpu.png';
 import displaySettings from '../../assets/media/display-settings.png';
 import installTab from '../../assets/media/install-tab.png';
+import chromeGithub from '../../assets/media/chrome-github.png';
+import ipadPoster from '../../assets/media/ipad-clip-poster.jpg';
 import accountSheet from '../../assets/media/account-sheet.png';
 import monitor from '../../assets/media/monitor.png';
 import monitorPoster from '../../assets/media/monitor-clip-poster.jpg';
@@ -42,7 +44,7 @@ import gpuPoster from '../../assets/media/gpu-clip-poster.jpg';
 	<Shot src={solidcraft} alt="SolidCraft, a 3D CAD app, with a chair model beside a terminal running Claude Code, in GNOME on an iPhone Duo" caption="Claude Code builds a chair in SolidCraft, a 3D CAD app." />
 	<Shot src={chromeGpu} alt="Chrome's chrome://gpu page listing canvas, compositing, WebGL and WebGPU as hardware accelerated" caption="Chrome with GPU acceleration." />
 	<Shot src={displaySettings} alt="GNOME's Displays settings with the resolution set to 1280 by 800" caption="The VM sets its own resolution." />
-	<Shot alt="A web browser in the VM showing a real website" todo="Firefox or Chrome on a real site (yours or a project page, nothing personal)." caption="A full desktop browser." />
+	<Shot src={chromeGithub} alt="Chrome on Ubuntu's GNOME desktop on an iPhone Duo, showing crate's GitHub repository page" caption="A full desktop browser: Chrome on an iPhone Duo." />
 	<Shot alt="An office suite or image editor in the VM" todo="LibreOffice or GIMP with a document open." caption="Office and creative apps." />
 </div>
 
@@ -50,7 +52,7 @@ import gpuPoster from '../../assets/media/gpu-clip-poster.jpg';
 
 <div class="shots">
 	<Shot src={monitor} alt="Ubuntu's GNOME desktop filling an external monitor, with an iPhone Duo below it showing crate's trackpad" caption="An external monitor, the iPhone Duo as its trackpad." />
-	<Shot alt="An iPad in landscape with a keyboard, running a Linux desktop" todo="Photo: the iPad with a keyboard on a desk, a desktop on screen." caption="iPad with a keyboard." />
+	<Clip src="/media/ipad.mp4" poster={ipadPoster} alt="An iPad with a keyboard and trackpad runs Ubuntu: the keyboard opens the app grid and types a search in Chrome, and the trackpad clicks and scrolls GitHub. Captions mark the parts shown sped up." caption="An iPad with a keyboard and trackpad." />
 	<Clip src="/media/monitor.mp4" poster={monitorPoster} alt="An iPhone Duo is plugged into a monitor, starts Ubuntu, which fills the monitor, then works as its trackpad and keyboard to open Chrome and search. Captions mark the parts shown sped up." caption="Plug in a monitor: Ubuntu fills it, and the iPhone is its trackpad." />
 </div>
 
