@@ -6,8 +6,6 @@ owner's go-ahead.
 
 ## Before launch
 
-- [ ] The two screenshots left on the Install page taken, or their placeholders
-      removed (the dashed boxes; see below). No more videos are planned.
 - [ ] The social card made (1280 × 640: icon, "crate", the tagline, a desktop
       screenshot) and added to `astro.config.mjs`'s `head`, and as crate-ios's
       social preview (repo Settings › General › Social preview).
@@ -52,11 +50,7 @@ Done, all cleaned of metadata:
   Chrome's GPU page, the monitor photo, the Displays settings, the serial
   console, the Install tab and the account sheet.
 
-Still placeholders, on the Install page only:
-
-- Mac: Xcode's Signing & Capabilities with the two memory capabilities, the
-  team name and email cropped out.
-- iPhone: Settings with JIT on.
+No placeholders are left on the site.
 
 What's on screen isn't metadata, so check it yourself in new screenshots: names,
 notifications, Wi-Fi names and browser history or suggestions.
