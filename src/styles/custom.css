@@ -90,20 +90,16 @@
 	color: #ffd38a;
 }
 
-/* A picture or clip beside its text, alternating sides. */
+/* A feature: its heading and text, then its clip at the column's full width,
+   so the clip is big enough to see (the pages' markup has the clip first). */
 .feature-row {
-	display: grid;
-	gap: 1.5rem;
-	align-items: center;
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 1rem;
 	margin-block: 2.5rem;
 }
-@media (min-width: 50rem) {
-	.feature-row {
-		grid-template-columns: 1fr 1fr;
-	}
-	.feature-row.flip > :first-child {
-		order: 2;
-	}
+.feature-row > * {
+	margin: 0 !important;
 }
 .feature-row h3 {
 	margin-top: 0;
@@ -142,6 +138,10 @@
 }
 .shots figure {
 	margin: 0;
+}
+/* A clip takes the grid's whole width, so it's big enough to follow. */
+.shots .shot:has(video.clip) {
+	grid-column: 1 / -1;
 }
 .shot img,
 .shot video {
